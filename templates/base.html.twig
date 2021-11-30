@@ -1,164 +1,53 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
-        {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-        {% endblock %}
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>{% block title %}Welcome!{% endblock %}</title>
+        <!-- Basic -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
 
-        {% endblock %}
-         <meta name="description" content="Free Bootstrap Theme by uicookies.com">
-    <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
-    
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Pinyon+Script" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/styles-merged.css')}}">
-    <link rel="stylesheet" href="{{asset('css/style.min.css')}}">
+        <!-- Site Metas -->
+        <title>Food Funday Restaurant - One page HTML Responsive</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-    <!--[if lt IE 9]>
-      <script src="js/vendor/html5shiv.min.js"></script>
-      <script src="js/vendor/respond.min.js"></script>
-    <![endif]-->
-    </head>
-    <body>
-         <!-- Fixed navbar -->
-    
-    <nav class="navbar navbar-default navbar-fixed-top probootstrap-navbar">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html" title="uiCookies:FineOak">FineOak</a>
-        </div>
-
-        <div id="navbar-collapse" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#" data-nav-section="welcome">Welcome</a></li>
-            <li><a href="#" data-nav-section="specialties">Specialties</a></li>
-            <li><a href="#" data-nav-section="menu">Menu</a></li>
-            <li><a href="#" data-nav-section="reservation">Reservation</a></li>
-            <li><a href="#" data-nav-section="events">Events</a></li>
-            <li><a href="{{path('contact')}}" target="_blank">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
- <section class="flexslider" data-section="welcome">
-      <ul class="slides">
-        <li style="background-image: url(img/hero_bg_1.jpg)" class="overlay" data-stellar-background-ratio="0.5">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-8 col-md-offset-2">
-                <div class="probootstrap-slider-text text-center probootstrap-animate probootstrap-heading">
-                  <h1 class="primary-heading">Welcome</h1>
-                  <h3 class="secondary-heading">The Resto</h3>
-                  <p class="sub-heading">A free bootstrap website template by <a href="https://uicookies.com">uicookies.com</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li style="background-image: url(img/hero_bg_2.jpg)" class="overlay">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-8 col-md-offset-2">
-                <div class="probootstrap-slider-text text-center probootstrap-animate probootstrap-heading">
-                  <h1 class="primary-heading">Dine</h1>
-                  <h3 class="secondary-heading">With Us</h3>
-                  <p class="sub-heading">A free bootstrap website template by <a href="https://uicookies.com"Z>uicookies.com</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-        </li>
-        <li style="background-image: url(img/hero_bg_3.jpg)" class="overlay">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-8 col-md-offset-2">
-                <div class="probootstrap-slider-text text-center probootstrap-animate probootstrap-heading">
-                  <h1 class="primary-heading">Enjoy</h1>
-                  <h3 class="secondary-heading">With Us</h3>
-                  <p class="sub-heading">A free bootstrap website template by <a href="https://uicookies.com">uicookies.com</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </section>
-{% block body %}{% endblock %}
-{% block contact %} {% endblock %}
-{% block reservation %} {% endblock %}
+        <!-- Site Icons -->
+        <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico" type="image/x-icon')}}" />
+        <link rel="apple-touch-icon" href="{{ asset('assets/images/apple-touch-icon.png')}}">
 
     
-    
+        <!-- Modernizer -->
+        <script src="{{ asset('assets/js/modernizer.js')}}"></script>
 
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
-        
-        <section class="probootstrap-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 probootstrap-animate">
-            <div class="probootstrap-footer-widget">
-              <h3>Locations</h3>
-              <div class="row">
-                <div class="col-md-6">
-                  <p> 198 West 21th Street, Suite 721 <br> New York NY 10016</p>
-                </div>
-                <div class="col-md-6">
-                  <p> 198 West 21th Street, Suite 721 <br> New York NY 10016</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 probootstrap-animate">
-            <div class="probootstrap-footer-widget">
-              <h3>Open Hours</h3>
-              <div class="row">
-                <div class="col-md-4">
-                  <p>Monday - Thursday <br> 5:30pm - 10:00pm</p>
-                </div>
-                <div class="col-md-4">
-                  <p>Friday - Sunday <br> 5:30pm - 10:00pm</p>
-                </div>
-                <div class="col-md-4">
-                  <p>Available for Catering <br> Email or Call Us</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="probootstrap-copyright">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8">
-            <p class="copyright-text">&copy; 2017 <a href="https://uicookies.com/">uiCookies:Resto</a>. All Rights Reserved. Images by <a href="https://graphicburger.com/">GraphicBurger</a> &amp; <a href="https://unsplash.com/">Unsplash</a></p>
-          </div>
-          <div class="col-md-4">
-            <ul class="probootstrap-footer-social right">
-              <li><a href="#"><i class="icon-twitter"></i></a></li>
-              <li><a href="#"><i class="icon-facebook"></i></a></li>
-              <li><a href="#"><i class="icon-instagram"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    {% block js %}
-    <script src="{{asset('js/scripts.min.js')}}"></script>
-    <script src="{{asset('js/custom.min.js')}}"></script>
-    {% endblock %}
-    </body>
-</html>
+            {% block stylesheets %}
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css')}}">
+        <!-- Site CSS -->
+        <link rel="stylesheet" href="{{ asset('assets/css/style.css')}}">
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" href="{{ asset('assets/css/responsive.css')}}">
+        <!-- color -->
+        <link id="changeable-colors" rel="stylesheet" href="{{ asset('assets/css/colors/orange.css')}}" />
+
+            {% endblock %}
+
+            {% block javascripts %}
+            
+            {% endblock %}
+        </head>
+        <body>{% block body %}{% endblock %}
+    {% block contact %} {% endblock %}
+    {% block reservation %} {% endblock %}
+       
+        </body>
+    </html>
